@@ -6,6 +6,7 @@ ruby '2.5.3'
 gem 'kaminari'
 gem 'devise'
 gem 'pry-rails'
+gem 'bootstrap', '~> 4.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
