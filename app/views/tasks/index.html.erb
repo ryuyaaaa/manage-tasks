@@ -1,0 +1,25 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>番号</th>
+        <th>タイトル</th>
+        <th>〆切</th>
+        <th>チェック</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <% @tasks.each do |task| %>
+            <tr>
+            <th scope="row"><%= task.id %></th>
+            <td><%= task.title %></td>
+            <td><%= task.deadline %></td>
+            <td>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="<%= task.is_finished %>"></label>
+                </div>
+            </td>
+            </tr>
+        <% end %>
+    </tbody>
+  </table>

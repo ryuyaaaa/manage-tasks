@@ -1,2 +1,18 @@
-// Custom bootstrap variables must be set or imported *before* bootstrap.
-// @import "bootstrap";
+@font-face {
+    font-family: 'Anurati';
+    src: url('Anurati-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    font-family: 'Anurati',serif;
+}
+
+.register {
+    margin: 15px 120px 15px auto;
+}
+
+.nav-item {
+    margin: 0 10px 0px 10px;
+}

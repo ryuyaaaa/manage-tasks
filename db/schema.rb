@@ -15,8 +15,10 @@ ActiveRecord::Schema.define(version: 2018_12_14_090205) do
   create_table "tasks", force: :cascade do |t|
     t.string "title", null: false
     t.datetime "deadline"
+    t.boolean "is_finished", default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["title"], name: "index_tasks_on_title"
   end
 
   create_table "users", force: :cascade do |t|
