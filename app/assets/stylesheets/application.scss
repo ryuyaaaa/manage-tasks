@@ -45,7 +45,7 @@ header {
     margin-bottom: 50px;
 }
 
-.make-new-task input {
+.make-new-task input, .back-to-root input {
     border: 3px solid;
     border-radius: 20px;
     padding: 5px 60px 5px 60px;
@@ -54,11 +54,19 @@ header {
     transition-duration: 0.5s;
 }
 
-.make-new-task {
+.make-new-task, .back-to-root {
     text-align: center;
 }
 
-.make-new-task input:hover {
+.make-new-task input:hover, .back-to-root input:hover {
     background-color: #87cefa;
     color: white;
+}
+
+.edit {
+    display: inline;
+}
+
+.delete {
+    display: inline;
 }

@@ -16,10 +16,18 @@
             <td><%= task.deadline %></td>
             <td>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="<%= task.is_finished %>"></label>
+                    <label><input type="checkbox" name="is_finished" value="<%= task.is_finished %>"></label>
+                </div>
+            </td>
+            <td>
+                <div class="edit">
+                    <a href="/tasks/#{@task.id}"><button type="button" class="btn btn-outline-success">編集</button></a>
+                </div>
+                <div class="delete">
+                    <a href="/tasks"><button type="button" class="btn btn-outline-danger">削除</button></a>
                 </div>
             </td>
             </tr>
         <% end %>
     </tbody>
-  </table>
+</table>
