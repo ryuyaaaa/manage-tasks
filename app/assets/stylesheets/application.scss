@@ -63,10 +63,27 @@ header {
     color: white;
 }
 
-.edit {
-    display: inline;
+.edit a {
+    color: #28A745;
+    transition-duration: 0.5s;
 }
 
-.delete {
-    display: inline;
+.edit a:hover {
+    color: white;
+    background-color: #28A745;
+    text-decoration: none;
+}
+
+.delete:hover {
+    color: white;
+}
+.delete a {
+    color: #DC3545;
+    transition-duration: 0.5s;
+}
+
+.delete a:hover {
+    color: white;
+    background-color: #DC3545;
+    text-decoration: none;
 }

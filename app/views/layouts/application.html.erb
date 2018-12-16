@@ -40,14 +40,15 @@
 
     <div class="container">
       <div class="row">
+        <% if user_signed_in? %>
         <div class="register">
           <a href="/tasks/new"><button type="button" class="btn btn-outline-info">タスク追加</button></a>
-        </div>        
+        </div>
+        <% end %>
+        
+        <%= yield %>
+        
       </div>
-
-      <%= yield %>
-
-    </div>
-
+    </div>  
   </body>
 </html>

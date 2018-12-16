@@ -3,8 +3,8 @@
       <tr>
         <th>番号</th>
         <th>タイトル</th>
-        <th>〆切</th>
-        <th>チェック</th>
+        <th>〆切日時</th>
+        <th>作成日時</th>
       </tr>
     </thead>
 
@@ -12,19 +12,15 @@
         <% @tasks.each do |task| %>
             <tr>
             <th scope="row"><%= task.id %></th>
-            <td><%= task.title %></td>
+            <td><strong><%= task.title %></strong></td>
             <td><%= task.deadline %></td>
+            <td><%= task.created_at %></td>
             <td>
-                <div class="checkbox">
-                    <label><input type="checkbox" name="is_finished" value="<%= task.is_finished %>"></label>
+                <div class="edit btn btn-outline-success">
+                    <%= link_to '編集', "/tasks/#{task.id}", method: :get %>
                 </div>
-            </td>
-            <td>
-                <div class="edit">
-                    <a href="/tasks/#{@task.id}"><button type="button" class="btn btn-outline-success">編集</button></a>
-                </div>
-                <div class="delete">
-                    <a href="/tasks"><button type="button" class="btn btn-outline-danger">削除</button></a>
+                <div class="delete btn btn-outline-danger">
+                    <%= link_to '削除', "/tasks/#{task.id}", method: :delete %>
                 </div>
             </td>
             </tr>

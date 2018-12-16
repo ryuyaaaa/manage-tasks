@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   
+  before_action :check_signed_in
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -35,6 +36,11 @@ class TasksController < ApplicationController
 
   def task_params
     params.permit(:title, :deadline, :is_finished)
+  end
+
+  def check_signed_in
+    # ログインしていなければログイン画面に飛ばす
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
 end
