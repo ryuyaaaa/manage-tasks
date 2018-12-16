@@ -16,12 +16,8 @@
             <td><%= task.deadline %></td>
             <td><%= task.created_at %></td>
             <td>
-                <div class="edit btn btn-outline-success">
-                    <%= link_to '編集', "/tasks/#{task.id}", method: :get %>
-                </div>
-                <div class="delete btn btn-outline-danger">
-                    <%= link_to '削除', "/tasks/#{task.id}", method: :delete %>
-                </div>
+                <%= link_to '編集', "/tasks/#{task.id}", method: :get, class: "edit btn btn-outline-success" %>
+                <%= link_to '削除', "/tasks/#{task.id}", method: :delete, class: "delete btn btn-outline-danger" %>   
             </td>
             </tr>
         <% end %>

@@ -16,18 +16,18 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="/">ManageTasks</a>
+        <%= link_to 'ManageTasks', "/", method: :get, class: "navbar-brand btn" %>
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                <%= link_to 'Home', destroy_user_session_path, method: :delete, class: "nav-link btn" %>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/">Mypage</a>
+              <%= link_to 'Mypage', destroy_user_session_path, method: :delete, class: "nav-link btn" %>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/">Logout</a>
+              <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link btn" %>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
