@@ -35,7 +35,7 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.permit(:title, :deadline, :is_finished)
+    params.permit(:title, :deadline)
   end
 
   def check_signed_in
